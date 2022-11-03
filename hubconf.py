@@ -84,7 +84,7 @@ def loss_fn(ypred, yground):
     return x
 
 def get_lossfn_and_optimizer(mymodel):
-    optimizer = torch.optim.SGD(model2.parameters(), lr=1e-3)
+    optimizer = torch.optim.SGD(mymodel.parameters(), lr=1e-3)
 
     return optimizer, loss_fn
 
@@ -96,7 +96,7 @@ def train(train_dataloader,model1,loss_fn1,optimizer1,num_classes,epochs=3):
         for i, (X,y) in enumerate(train_dataloader):
             X, y = X.to(device), y.to(device)
             ypred = model1(X)
-            oh = torch.nn.functional.one_hot(y, num_classes=num_classes)
+            oh = torch.nn.functional.one_hot(y,num_classes=num_classes)
             loss = loss_fn1(ypred,oh)
 
             optimizer1.zero_grad()
