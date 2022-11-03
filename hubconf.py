@@ -89,7 +89,7 @@ def get_lossfn_and_optimizer(mymodel):
     return optimizer, loss_fn
 
 def train(train_dataloader,model1,loss_fn1,optimizer1,num_classes,epochs=3):
-    for epoch in range(epoch):
+    for epoch in range(epochs):
         model1.train()
         train_loss = 0
         correct = 0
