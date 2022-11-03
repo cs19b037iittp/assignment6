@@ -3,4 +3,4 @@ Shreetesh M
 CS19B037
 
 ## Exercise 4
-Hubconf.py for dynamic NN (exercise 3).
+hubconf.py for dynamic NN of exercise 3.
