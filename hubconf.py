@@ -51,7 +51,7 @@ class cs19b037AdvancedNN(nn.Module):
 
 def get_model(config_list,train_data_loader):
     modules_list = []
-    for module in config:
+    for module in config_list:
         modules_list.append(nn.Conv2d(in_channels=module[0], out_channels=module[1], kernel_size=module[2], stride=module[3], padding=module[4]))
     in_features=None
 
