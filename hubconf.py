@@ -83,7 +83,7 @@ def loss_fn(ypred, yground):
 
     return x
 
-def get_lossfn_and_optimizer(mymodel);
+def get_lossfn_and_optimizer(mymodel):
     optimizer = torch.optim.SGD(model2.parameters(), lr=1e-3)
 
     return optimizer, loss_fn
